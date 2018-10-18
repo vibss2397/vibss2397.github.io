@@ -1,0 +1,57 @@
+.masthead {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  color: white;
+  height: auto;
+
+  background-color: #25222B;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .darker{
+    background: linear-gradient(180deg, #2B2737 0%, #373F3F 100%);
+  }
+  .masthead-card{
+    background-color: white;
+
+    min-height: 400px;
+    height: 80%;
+    max-height: 900px;
+    border: 0px;
+    max-width: 600px;
+    width: 80%;
+    min-width: 400px;
+    box-shadow: 10px 40px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    .grad-card{
+      background: linear-gradient(180deg, #82BCFF 0%, #8060FF 100%);
+      box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+      height: 40%;
+      width: 80%;
+      border: 0px;
+      position: relative;
+      top: 10%;
+      left: -10%;
+    }
+    .head{
+      line-height: 60px;
+      font-family: $font-primary;
+
+      color: #262B3A;
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;font-family: $font-primary;
+  }
+  @media (min-width: 992px) {
+    height: 100vh;
+    h1 {
+      font-size: 5.5rem;
+    }
+  }
+}
