@@ -5,6 +5,7 @@
  */
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,800,900");
+@import url("https://fonts.googleapis.com/css?family=Neuton:400,700");
 body,
 html {
   width: 100%;
@@ -101,6 +102,7 @@ h6 {
   border-radius: 6px;
   height: 400px;
   border: 0px;
+  width: 250px;
 }
 
 .g-1 {
@@ -112,7 +114,7 @@ h6 {
 }
 
 .g-3 {
-  background: linear-gradient(142.13deg, #8459FF 17.87%, #B63060 120.04%);
+  background: linear-gradient(142.13deg, #5C59FF 17.87%, #30AEB6 120.04%);
 }
 
 .mynav {
@@ -219,6 +221,42 @@ h6 {
     line-height: 3.8rem;
     color: #262B3A;
   }
+}
+
+.content-section-heading {
+  color: #1b1e21;
+}
+
+.link {
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  color: #7c838c;
+  display: inline-block;
+}
+
+.link p {
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.link:hover {
+  color: #7c5cff;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+p.lead {
+  color: #1b1c1e;
+  line-height: 130%;
+  font-family: 'Montserrat Light', serif;
+}
+
+p.text {
+  font-size: 22px;
+  color: #36383c;
+  font-family: Neuton,sans-serif;
+  line-height: 32px;
 }
 
 /* Side Menu */
