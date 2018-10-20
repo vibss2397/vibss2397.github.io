@@ -1,3 +1,28 @@
+#fields{
+  background: #F4F4F4;
+  h3{
+    color: #797474;
+  }
+}
+
+.grad-card{
+  box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  height: 400px;
+  border:0px;
+  width: 250px;
+}
+
+.g-1{
+  background: linear-gradient(142.13deg, #8459FF 17.87%, #B63060 120.04%);
+}
+.g-2{
+
+  background: linear-gradient(142.13deg, #FF8159 17.87%, #B63060 120.04%);
+}.g-3{
+ linear-gradient(142.13deg, #5C59FF 17.87%, #30AEB6 120.04%);
+}
+
 .mynav{
 
   width: 100%;
