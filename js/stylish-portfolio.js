@@ -22,6 +22,19 @@
       }
     }
   });
+  var classes_to_add = ['g-1', 'g-2', 'g-3']
+  for (var i =0;i<7;i++){
+    var choice= Math.floor(Math.random() * (3 - 1 + 1)) + 1
+    $('.owl-container-ele').append(
+     '<div class="item mx-auto card grad-card project-card-'+i+' p-4" data-tilt data-tilt-max="10"  data-tilt-glare data-tilt-max-glare="0.8">'+
+            '<h4>Project Title</h4>'+
+            '<div class="card white-card" >'+
+            '</div>'+
+            '<p class=" mt-4" style="font-weight: lighter">Lorem ipsum dolor sit amet, In augue justo, dapibus vita</p>'+
+          '</div>'   
+    )
+    $('.project-card-'+i).addClass(classes_to_add[choice-1])
+  }
 
   // Closes responsive menu when a scroll trigger link is clicked
   $('#sidebar-wrapper .js-scroll-trigger').click(function() {
