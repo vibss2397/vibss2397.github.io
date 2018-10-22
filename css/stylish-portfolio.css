@@ -97,6 +97,8 @@ h6 {
 }
 
 .grad-card {
+  -webkit-box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   height: 450px;
   border: 0px;

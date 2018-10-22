@@ -66,7 +66,7 @@
               <div class="row justify-content-center align-items-center h-100  p-5">
                 <div class="col-12 text-left">
                   <h5 class="mb-2 text-center" style="opacity: 0.2;font-weight: lighter">Featured Projects</h5>
-                  <div class="card masthead-card tilt-card mx-auto "  style="transform-style: preserve-3d">
+                  <div class="card masthead-card tilt-card mx-auto "  data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-max="5" style="transform-style: preserve-3d">
                     <div class="topic px-3 pt-3">
                       <h3 class="m-0">Char RNN</h3>
                       <h6 style="font-weight: 400">(Generating Rick and Morty Episodes Via Machine Learning)</h6>
@@ -102,22 +102,23 @@
   <section id="portfolio">
     <div class="container  py-5">
       <div class="row justify-content-center">
-        <h2 class="mb-5">My Project Library</h2>
+        <h2 class="mb-0">My Project Library</h2>
       </div>
       <div class="row justify-content-center">
 
-        <div class="owl-carousel owl-theme py-5" style="color: white">
-          <div class="item mx-auto tilt-card card grad-card g-1 p-4" data-tilt>
+        <div class="owl-carousel owl-theme " style="color: white">
+
+          <div class="item mx-auto   card grad-card g-1 p-4" data-tilt data-tilt-max="10"  data-tilt-glare data-tilt-max-glare="0.8">
             <h4>Project Title</h4>
             <div class="card white-card" >
 
             </div>
             <p class=" mt-4" style="font-weight: lighter">Lorem ipsum dolor sit amet, In augue justo, dapibus vita</p>
           </div>
-          <div class="item mx-auto tilt-card  card grad-card g-2" data-tilt>
+          <div class="item mx-auto   card grad-card g-2" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5">
 
           </div>
-          <div class="item mx-auto tilt-card card grad-card g-3" data-tilt>
+          <div class="item mx-auto  card grad-card g-3" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5">
 
           </div>
 
@@ -130,20 +131,20 @@
   <section id="research" style="background-color: rgba(27,28,30,0.02)">
     <div class="container  py-5">
       <div class="row justify-content-center">
-        <h2 class="mb-5">My Research</h2>
+        <h2 class="mb-0">My Research</h2>
       </div>
       <div class="row justify-content-center">
 
-        <div class="owl-carousel owl-theme py-5" style="color: white">
-          <div class="item card mx-auto grad-card g-0 p-4" data-tilt>
+        <div class="owl-carousel owl-theme" style="color: white">
+          <div class="item card mx-auto grad-card g-0 p-4" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5">
             <h4>Project Title</h4>
 
             <p class=" mt-4 text-muted" style="font-weight: lighter">Lorem ipsum dolor sit amet, In augue justo, dapibus vita</p>
           </div>
-          <div class="item card mx-auto grad-card g-0" data-tilt>
+          <div class="item card mx-auto grad-card g-0" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5">
 
           </div>
-          <div class="item card mx-auto grad-card g-0" data-tilt>
+          <div class="item card mx-auto grad-card g-0" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5">
 
           </div>
 
@@ -212,7 +213,7 @@
             0:{
                 items:1
             },
-            600:{
+            800:{
                 items:2
             },
             1000:{
@@ -220,13 +221,7 @@
             }
         }
     });
-    VanillaTilt.init(document.querySelector(".tilt-card"), {
-        max: 10,
-        speed: 200,
-        glare:                  true,   // if it should have a "glare" effect
-        "max-glare":            .3,      // the maximum "glare" opacity (1 = 100%, 0.5 = 50%)
-        "glare-prerender":      false,
-    });
+
 </script>
 <style>
   .owl-stage-outer{
