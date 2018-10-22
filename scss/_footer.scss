@@ -3,16 +3,20 @@ footer.footer {
   padding-bottom: 5rem;
   .social-link {
     display: block;
-    height: 4rem;
-    width: 4rem;
-    line-height: 4.3rem;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3.3rem;
     font-size: 1.5rem;
-    background-color: $primary;
+    background-color: whitesmoke;
+color: grey;
     transition: background-color 0.15s ease-in-out;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
     &:hover {
-      background-color: darken($primary, 10%);
+      background: rgba(128, 128, 128, 0.2);
       text-decoration: none;
+    }
+    i{
+      color: rgba(105, 103, 128, 0.64);
     }
   }
 }
