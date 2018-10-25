@@ -132,6 +132,9 @@ h6 {
 .g-3 {
   background: linear-gradient(142.13deg, #5C59FF 17.87%, #30AEB6 120.04%);
 }
+.g-4{
+  background: linear-gradient(0deg,#222,#45454d);
+}
 
 .mynav {
   width: 100%;
