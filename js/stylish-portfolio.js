@@ -22,11 +22,11 @@
       }
     }
   });
-  var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4'];
+  var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4','g-5','g-6'];
   var titles=['Generating rick n morty subtitles via machine learning', 'Path Finding Algorithms', 'Playing frozen lake via qlearning', 'SeeThings, Shazam for things', 'classifying facial emotions', 'Generating superheroes using deep learning', 'teaching a bot to play atari games']
-  var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce']
+  var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce'];
   for (var i =0;i<7;i++){
-    var choice= Math.floor(Math.random() * Math.floor(4))
+    var choice= Math.floor(Math.random() * Math.floor(6));
     $('.owl-container-ele').append(
         '<a href="./project/template.html?name='+pathtolink[i]+'" style="color:#fff;text-decoration:none;">'+
         '<div class="item mx-auto card grad-card project-card-'+i+' p-4" data-tilt data-tilt-max="10"  data-tilt-glare data-tilt-max-glare="0.8">'+
