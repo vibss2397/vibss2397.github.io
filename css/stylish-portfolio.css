@@ -240,6 +240,24 @@ h1 {
 }
 
 @media (max-width: 600px) {
+  #content {
+    padding-top: 20px;
+  }
+  #content p, #content ul, #content ol {
+    font-size: 20px;
+    line-height: 1.58;
+    letter-spacing: -.004em;
+    color: #36383c;
+    font-family: Neuton,sans-serif;
+  }
+  #content img {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .project-head {
+    padding-top: 80px;
+  }
   .masthead-card {
     height: 330px;
     width: 100%;
@@ -260,6 +278,24 @@ h1 {
 }
 
 @media (min-width: 992px) {
+  .project-head {
+    height: 100%;
+  }
+  p, ul, ol {
+    font-size: 20px;
+    line-height: 1.58;
+    letter-spacing: -.004em;
+    color: #36383c;
+    font-family: Neuton,sans-serif;
+  }
+  img {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .masthead-card {
     height: 530px;
     width: 400px;
