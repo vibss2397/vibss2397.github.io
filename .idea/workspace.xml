@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd8b11b5-62e0-401b-8b97-586dee8fa5dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/stylish-portfolio.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylish-portfolio.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylish-portfolio.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylish-portfolio.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/_masthead.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_masthead.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -54,7 +52,7 @@
           <entry key="html" value="2556" />
           <entry key="js" value="18" />
           <entry key="json" value="11" />
-          <entry key="scss" value="1415" />
+          <entry key="scss" value="1423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -62,7 +60,7 @@
           <entry key="HTML" value="2556" />
           <entry key="JSON" value="11" />
           <entry key="JavaScript" value="18" />
-          <entry key="SCSS" value="1415" />
+          <entry key="SCSS" value="1423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -114,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scss/_masthead.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="183" column="6" lean-forward="true" selection-start-line="183" selection-start-column="6" selection-end-line="183" selection-end-column="6" />
+            <state relative-caret-position="476">
+              <caret line="197" column="5" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -304,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28955000" />
+    <option name="totallyTimeSpent" value="29018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -449,8 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/_masthead.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="183" column="6" lean-forward="true" selection-start-line="183" selection-start-column="6" selection-end-line="183" selection-end-column="6" />
+        <state relative-caret-position="476">
+          <caret line="197" column="5" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
         </state>
       </provider>
     </entry>

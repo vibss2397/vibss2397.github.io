@@ -281,14 +281,14 @@ h1 {
   .project-head {
     height: 100%;
   }
-  p, ul, ol {
+  #content p, #content ul, #content ol {
     font-size: 20px;
     line-height: 1.58;
     letter-spacing: -.004em;
     color: #36383c;
     font-family: Neuton,sans-serif;
   }
-  img {
+  #content img {
     display: block;
     text-align: center;
     margin-left: auto;

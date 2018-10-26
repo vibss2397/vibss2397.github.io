@@ -174,7 +174,11 @@
   @media (min-width: 992px) {
     .project-head{
       height: 100%;
-    }p,ul,ol{
+    }
+    #content{
+
+
+    p,ul,ol{
        font-size: 20px;
        line-height: 1.58;
        letter-spacing: -.004em;
@@ -190,6 +194,7 @@
       margin-right: auto;
       padding-top: 30px;
       padding-bottom: 30px;
+    }
     }
     .masthead-card {
       height: 530px;
