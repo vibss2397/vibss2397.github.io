@@ -1,3 +1,21 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @vibss2397 Sign out
+1
+0 1 TredGamerZ/viblog Private
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+viblog/js/stylish-portfolio.js
+deac0ae  a day ago
+@TredGamerZ TredGamerZ CSS Fixed Index | Added more gradient cards
+@vibss2397 @TredGamerZ
+     
+81 lines (74 sloc)  3.31 KB
 (function($) {
   "use strict"; // Start of use strict
 
@@ -22,10 +40,11 @@
       }
     }
   });
-  var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4'];
+  var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4','g-5','g-6'];
   var titles=['Generating rick n morty subtitles via machine learning', 'Path Finding Algorithms', 'Playing frozen lake via qlearning', 'SeeThings, Shazam for things', 'classifying facial emotions', 'Generating superheroes using deep learning', 'teaching a bot to play atari games']
-  var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce']
+  var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce'];
   for (var i =0;i<7;i++){
+    var choice= Math.floor(Math.random() * Math.floor(6));
     $('.owl-container-ele').append(
         '<a href="./project/template.html?name='+pathtolink[i]+'" style="color:#fff;text-decoration:none;">'+
         '<div class="item mx-auto card grad-card project-card-'+i+' p-4" data-tilt data-tilt-max="10"  data-tilt-glare data-tilt-max-glare="0.8">'+
@@ -35,7 +54,7 @@
             '<p class=" mt-4" style="font-weight: lighter">Lorem ipsum dolor sit amet, In augue justo, dapibus vita</p>'+
           '</div></a>'   
     )
-    $('.project-card-'+i).addClass(classes_to_add[i%4])
+    $('.project-card-'+i).addClass(classes_to_add[choice])
   }
 
   // Closes responsive menu when a scroll trigger link is clicked
@@ -76,4 +95,3 @@ var onMapClickHandler = function(event) {
   that.on('mouseleave', onMapMouseleaveHandler);
 }
 // Enable map zooming with mouse scroll when the user clicks the map
-$('.map').on('click', onMapClickHandler);
