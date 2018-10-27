@@ -1,3 +1,21 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @vibss2397 Sign out
+1
+0 1 TredGamerZ/viblog Private
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+viblog/js/stylish-portfolio.js
+deac0ae  a day ago
+@TredGamerZ TredGamerZ CSS Fixed Index | Added more gradient cards
+@vibss2397 @TredGamerZ
+     
+81 lines (74 sloc)  3.31 KB
 (function($) {
   "use strict"; // Start of use strict
 
@@ -77,4 +95,3 @@ var onMapClickHandler = function(event) {
   that.on('mouseleave', onMapMouseleaveHandler);
 }
 // Enable map zooming with mouse scroll when the user clicks the map
-$('.map').on('click', onMapClickHandler);
