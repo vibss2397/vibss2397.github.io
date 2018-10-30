@@ -37,7 +37,7 @@
             '<p class=" mt-4" style="font-weight: lighter">Lorem ipsum dolor sit amet, In augue justo, dapibus vita</p>'+
           '</div></a>'   
     )
-    $('.project-card-'+i).addClass(classes_to_add[choice])
+    $('.project-card-'+i).addClass(classes_to_add[i%6])
   }
 
   // Closes responsive menu when a scroll trigger link is clicked
