@@ -29,15 +29,18 @@
   for (var i =0;i<7;i++){
     var choice= Math.floor(Math.random() * Math.floor(6));
     $('.owl-container-ele').append(
-        '<a href="./project/template.html?name='+pathtolink[i]+'" style="color:#fff;text-decoration:none;">'+
-        '<div class="item mx-auto card grad-card project-card-'+i+' p-4" data-tilt data-tilt-max="10"  data-tilt-glare data-tilt-max-glare="0.8">'+
-            '<h4>'+titles[i]+'</h4>'+
-            '<div class="card white-card" >'+
+        '<a href="./project/template.html?name='+pathtolink[i]+'" style="color:#fff;text-decoration:none;overflow: hidden">'+
+        '<div class="item mx-auto card grad-card project-card-'+i+' "  data-tilt data-tilt-max="10"  data-tilt-glare data-tilt-max-glare="0.8">'+
+            '<h4 class="p-4" style="z-index: 99" >'+titles[i]+'</h4>'+
+            '<div class="card  " style="position: absolute;width: 100%;height: 100%;z-index: 22;mix-blend-mode: luminosity;opacity: 0.7" id="'+pathtolink[i]+'">'+
             '</div>'+
-            '<p class=" mt-4" style="font-weight: lighter">Lorem ipsum dolor sit amet, In augue justo, dapibus vita</p>'+
+
           '</div></a>'   
-    )
-    $('.project-card-'+i).addClass(classes_to_add[i%6])
+    );
+    $('.project-card-'+i).addClass(classes_to_add[i%6]);
+    var pattern = pathtolink[i];
+      $('#'+pathtolink[i]).geopattern(pattern);
+
   }
 
   // Closes responsive menu when a scroll trigger link is clicked
