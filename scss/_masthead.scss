@@ -110,6 +110,18 @@
     }
 
   }
+.tiwo {
+  mix-blend-mode: luminosity;
+  img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-height: 80px;
+
+  }
+}
   .info-card{
     display: block;
     width: 340px;
@@ -136,6 +148,7 @@
   }
   .exp-card{
     height: 350px;
+    width: 250px;
     color: white!important;
     overflow: hidden;
   }
