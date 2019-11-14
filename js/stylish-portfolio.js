@@ -42,6 +42,11 @@
       $('#'+pathtolink[i]).geopattern(pattern);
 
   }
+  
+  for (var i=1;i<=3;i++){
+    let r = Math.random().toString(36).substring(10);
+    $('.research-card-'+i.toString()).geopattern(r);
+  }
 
   // Closes responsive menu when a scroll trigger link is clicked
   $('#sidebar-wrapper .js-scroll-trigger').click(function() {
