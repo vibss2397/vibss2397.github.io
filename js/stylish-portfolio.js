@@ -44,7 +44,7 @@
   }
   
   for (var i=1;i<=3;i++){
-    let r = Math.random().toString(36).substring(10);
+    let r = Math.random().toString(36).substring(2, 10);
     $('.research-card-'+i.toString()).geopattern(r);
   }
 
