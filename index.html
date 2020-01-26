@@ -66,9 +66,9 @@
               <div class="row justify-content-center align-items-center h-100  p-5">
                 <div class="col-12 text-left">
                   <h5 class="mb-2 text-center" style="opacity: 0.2;font-weight: lighter">Featured Projects</h5>
-                  <div class="container  " >
-                    <div class="owl-carousel owl-theme " style="color: white" id="owl-head">
-                        <a href="./project/template.html?name=gan" style="color:#fff;text-decoration:none;overflow: hidden">
+                  <div class="container" >
+                    <div class="owl-carousel owl-theme featured-project" style="color: white" id="owl-head">
+                        <!-- <a href="./project/template.html?name=gan" style="color:#fff;text-decoration:none;overflow: hidden">
                           <div class="card masthead-card tilt-card mx-auto   "  data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-max="5" style="transform-style: preserve-3d;height:auto">
                             <div class="topic px-3 pt-3">
                               <h3 class="m-0">Generative Adverserial Networks</h3>
@@ -102,9 +102,8 @@
                         <img class="img-fluid mx-auto my-auto" src="./img/gif/astar.gif">
                       </div>
 
-                        </div></a>
-
-
+                        </div>
+                      </a> -->
                     </div>
                   </div>
               </div>
@@ -154,9 +153,8 @@
   <section id="portfolio">
     <div class="container  py-5">
       <div class="row justify-content-center p-3">
-        <h2 class="mb-0">Intelligent Machines</h2>
-          <br>
-          <p> A List Of Some Of My Recent Projects.</p> 
+        <div class="col-6 offset-2"><h2 class="mb-0">Intelligent Machines</h2></div>
+        <div class="col-6 offset-3"><p> A List Of Some Of My Recent Projects.</p></div>
       </div>
       <div class="row justify-content-center p-3">
 
@@ -177,8 +175,9 @@
         <div class="owl-carousel owl-theme">
           <div class="item card mx-auto grad-card g-0 research-card-1 mt-2" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5" style="color: #fff;">
             <div class="p-4">
-              <h4>Achieving super resolution for Microscopic Images using Deep Learning - Undergrad Research Project </h4>
-              <div class="mx-auto" style="z-index: 99;">
+              <h4>Achieving super resolution for Microscopic Images - Undergrad Research Project </h4>
+              
+              <div class="mx-auto" style="z-index: 999;">
                   <a href="https://colab.research.google.com/drive/1Syqb4oZH9TQvDHNLvbg69-kfzqV7nBoz"  target="_blank"><i class="fas fa-file-invoice fa-2x" style = "color:#fff;"></i></a>
                     
             </div>
@@ -320,10 +319,11 @@
                 items:1
             }
         }
-    });$('#owl-other').owlCarousel({
-    margin:10,
+    });
+    $('.owl-other').owlCarousel({
+      margin:10,
         smartSpeed :1500,
-        
+        nav: true,
         navigation: true,
     responsive:{
         0:{
@@ -333,15 +333,15 @@
             items:3
         },
         1000:{
-            items:4
+            items:5
         }
     }
 });
     $('.owl-carousel').owlCarousel({
         margin:10,
         smartSpeed :900,
-        
-        navigation: true,
+        loop : true,
+        nav: true,
         responsive:{
             0:{
                 items:1
@@ -352,8 +352,7 @@
             1000:{
                 items:3
             }
-        },
-        navText : ["<i class='fab fa-chevron-left'></i>","<i class='fba fa-chevron-right'></i>"]
+        }
     });
 
 </script>
