@@ -25,7 +25,7 @@
   });
   var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4','g-5','g-6'];
   var titles=['Generating rick n morty subtitles via machine learning', 'Greedy vs Heuristic', 'Playing frozen lake via qlearning', 'Shazam for things', 'classifying facial emotions', 'Generating superheroes using deep learning', 'teaching a bot to play atari games']
-  var pathtolink=['char-RNN','Path-Finding-Algorithms','Q-Learning','See-Things','Face-Emoji','Superhero-GAN','Policy-Gradients'];
+  var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce'];
   var pathtoImages = ['./img/gif/charRnn.gif', './img/gif/astar.gif', './img/gif/qlearn.gif', './img/seething/main.gif', './img/face2emoji/back.png', './img/gan/marvel3.jpg', './img/gif/atari.gif']
   var bleh = [0, 1, 2, 3, 4, 5, 6];
   var choice = [];
@@ -53,7 +53,7 @@
   }
   for(let i = 0;i<3;i++){
     let rand = Math.floor(Math.random()*pathtolink.length);
-    $('.featured-project').append('<a href="./project/template.html?name=gan" style="color:#fff;text-decoration:none;overflow: hidden">'+
+    $('.featured-project').append('<a href="./project/template.html?name='+pathtolink[choice[i]]+'" style="color:#fff;text-decoration:none;overflow: hidden">'+
     '<div class="card masthead-card tilt-card mx-auto   "  data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-max="5" style="transform-style: preserve-3d;height:auto">'+
       '<div class="topic px-3 pt-3">'+
         '<h3 class="m-0">'+pathtolink[rand]+'</h3>'+
