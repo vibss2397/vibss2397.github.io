@@ -53,7 +53,7 @@
   }
   for(let i = 0;i<3;i++){
     let rand = Math.floor(Math.random()*pathtolink.length);
-    $('.featured-project').append('<a href="./project/template.html?name='+pathtolink[choice[i]]+'" style="color:#fff;text-decoration:none;overflow: hidden">'+
+    $('.featured-project').append('<a href="./project/template.html?name='+pathtolink[rand]+'" style="color:#fff;text-decoration:none;overflow: hidden">'+
     '<div class="card masthead-card tilt-card mx-auto   "  data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-max="5" style="transform-style: preserve-3d;height:auto">'+
       '<div class="topic px-3 pt-3">'+
         '<h3 class="m-0">'+pathtolink[rand]+'</h3>'+
