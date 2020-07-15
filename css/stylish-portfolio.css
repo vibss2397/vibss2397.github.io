@@ -100,6 +100,15 @@ h6 {
   -webkit-box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
+  height: 330px;
+  border: 0px;
+  width: 340px;
+}
+
+.grad-card2 {
+  -webkit-box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
   height: 250px;
   border: 0px;
   width: 340px;
@@ -149,7 +158,6 @@ h6 {
   width: 100%;
   background: white;
   z-index: 999;
-  position: fixed;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -288,14 +296,11 @@ h1 {
     height: 330px;
     width: 100%;
   }
-  .masthead-card .grad-card {
+  .masthead-card {
     height: 100px;
     width: 100%;
   }
-  .grad-card {
-    width: 300px;
-  }
-  .grad-card .white-card {
+  .white-card {
     width: 250px;
   }
   h2 {
@@ -634,4 +639,12 @@ a:hover, a:focus, a:active {
 
 .text-secondary {
   color: #ecb807 !important;
+}
+.btn-purple, .btn-primary:focus{
+  color : #6f42c1 !important;
+  border-color: #6f42c1;
+}
+.btn-purple:hover{
+  color : #fff !important;
+  background-color: #6f42c1 !important;
 }

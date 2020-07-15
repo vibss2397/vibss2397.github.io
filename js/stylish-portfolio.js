@@ -23,10 +23,10 @@
       }
     }
   });
-  var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4','g-5','g-6'];
-  var titles=['Generating rick n morty subtitles via machine learning', 'Greedy vs Heuristic', 'Playing frozen lake via qlearning', 'Shazam for things', 'classifying facial emotions', 'Generating superheroes using deep learning', 'teaching a bot to play atari games']
-  var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce'];
-  var pathtoImages = ['./img/gif/charRnn.gif', './img/gif/astar.gif', './img/gif/qlearn.gif', './img/seething/main.gif', './img/face2emoji/back.png', './img/gan/marvel3.jpg', './img/gif/atari.gif']
+  var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4','g-5','g-6', 'g-4'];
+  var titles=['Generating rick n morty subtitles via machine learning', 'Greedy vs Heuristic', 'Playing frozen lake via qlearning', 'Shazam for things', 'classifying facial emotions', 'Generating superheroes using deep learning', 'teaching a bot to play atari games', 'Active learning for cats vs dogs']
+  var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce', 'active'];
+  var pathtoImages = ['./img/gif/charRnn.gif', './img/gif/astar.gif', './img/gif/qlearn.gif', './img/seething/main.gif', './img/face2emoji/back.png', './img/gan/marvel3.jpg', './img/gif/atari.gif', './img/gif/cvd.gif']
   var bleh = [0, 1, 2, 3, 4, 5, 6];
   var choice = [];
   for(let i = 0;i<7;i++){
@@ -34,21 +34,28 @@
     choice.push(bleh[tem]);
     bleh.splice(tem, 1);    
   }
-  
-  for (var i =0;i<7;i++){
+  let rando = [];
+  for (var i =0;i<4;i++){
+    let rand = Math.floor(Math.random()*pathtolink.length);
+    while(rando.includes(rand)){
+      console.log('heere')
+      rand = Math.floor(Math.random()*pathtolink.length);
+    }
+    rando.push(rand);
     $('.owl-container-ele').append(
-        '<a href="./project/template.html?name='+pathtolink[choice[i]]+'" style="color:#fff;text-decoration:none;overflow: hidden">'+
+        '<a href="./project/template.html?name='+pathtolink[rand]+'" style="color:#fff;text-decoration:none;overflow: hidden">'+
         '<div class="item mx-auto card grad-card project-card-'+i+' "  data-tilt data-tilt-max="10"  data-tilt-glare data-tilt-max-glare="0.8">'+
-            '<h4 class="p-4" style="z-index: 99" >'+titles[choice[i]]+'</h4>'+
-            // '<img class="img-fluid mx-auto my-auto" style="z-index:999;width:40% !important;" id="image" src="'+pathtoImages[i]+'" >'+
-            '<div class="card  " style="position: absolute;width: 100%;height: 100%;z-index: 22;mix-blend-mode: luminosity;opacity: 0.7;" id="'+pathtolink[choice[i]]+'">'+
-            '</div>'+
-
+        '<div class="topic px-3 pt-3">'+
+        '<h3 class="m-0">'+pathtolink[rand]+'</h3>'+
+        '<h6 style="font-weight: 400">('+titles[rand]+')</h6>'+
+      '</div><br>'+
+      '<div class="row justify-content-center"><img class="img-fluid" src="'+pathtoImages[rand]+'" style="width:200px !important;"></div>'+
+      '</div>'+
           '</div></a>'   
     );
-    $('.project-card-'+i).addClass(classes_to_add[choice[i]%6]);
-    var pattern = pathtolink[choice[i]];
-      $('#'+pathtolink[choice[i]]).geopattern(pattern);
+    $('.project-card-'+i).addClass(classes_to_add[choice[i]%7]);
+    // var pattern = pathtolink[choice[i]];
+    //   $('#'+pathtolink[choice[i]]).geopattern(pattern);
 
   }
   for(let i = 0;i<3;i++){
@@ -65,7 +72,7 @@
   }
 
   for (var i=1;i<=3;i++){
-    let r = Math.random().toString(36).substring(2, 10);
+    let r = Math.random().toString(36).substring(4, 10);
     $('.research-card-'+i.toString()).geopattern(r);
   }
 
