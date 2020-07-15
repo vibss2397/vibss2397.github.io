@@ -26,7 +26,7 @@
   var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4','g-5','g-6', 'g-4'];
   var titles=['Generating rick n morty subtitles via machine learning', 'Greedy vs Heuristic', 'Playing frozen lake via qlearning', 'Shazam for things', 'classifying facial emotions', 'Generating superheroes using deep learning', 'teaching a bot to play atari games', 'Active learning for cats vs dogs']
   var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce', 'active'];
-  var pathtoImages = ['./img/gif/charRnn.gif', './img/gif/astar.gif', './img/gif/qlearn.gif', './img/seething/main.gif', './img/face2emoji/back.png', './img/gan/marvel3.jpg', './img/gif/atari.gif', './img/gif/cvd.gif']
+  var pathtoImages = ['./img/gif/charRnn.gif', './img/gif/astar.gif', './img/gif/qlearn.gif', './img/seething/main.gif', './img/face2emoji/back.PNG', './img/gan/marvel3.jpg', './img/gif/atari.gif', './img/gif/cvd.gif']
   var bleh = [0, 1, 2, 3, 4, 5, 6];
   var choice = [];
   for(let i = 0;i<7;i++){
