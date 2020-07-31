@@ -1,0 +1,228 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>OS Task Scheduler</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="config.js"> </script>
+    <script>
+        var json2 = json;
+        json2['waiting'] = [];
+        json2['suspended'] = [];
+        json2['ready'] = [];
+    </script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="loading/loading-bar.css"/>
+    <script type="text/javascript" src="loading/loading-bar.js"></script>
+
+  </head>
+  <body class="text-center vsc-initialized">
+    <div class="cover-container d-flex h-100 w-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">RTOS Task Scheduler</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active a1" href="#">Home</a>
+        <a class="nav-link a1" href="#">Features</a>
+        <!-- <a class="nav-link" href="#">Contact</a> -->
+      </nav>
+    </div>
+  </header>
+  <br>
+  <div class="row justify-content-center">
+        <div class="col-8 part-1">
+            <div class="card">
+                <h5 class="card-header">Algorithm :
+                    <div class="btn-group">
+                        <button class="btn btn-success dropdown-toggle colo algo-choose" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Chose an Option
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item opt-1" href="# " onclick="setValue(1)">Round Robin</a>
+                            <a class="dropdown-item opt-2" href="#" onclick="setValue(2)">Rate Monotonic</a>
+                            <a class="dropdown-item opt-3" href="#" onclick="setValue(3)">Earliest Deadline</a>
+                        </div>
+                      </div>
+                </h5>
+                <div class="card-body algo-form">
+                    <h5>Chose an algorithm from the list</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 part-2" style="display: none;">
+            <br>
+            <div class="row">
+                <div class="col-5 justify-content-start">
+                    <div class="card" style="width: 18rem;">
+                        <h5 class="card-header">Task Control Block</h5>
+                        <div class="card-body">
+                            <form class="TCB">
+                                <!-- insert programmatically -->
+                            </form>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-5 process-list">
+                    <h4 class='empty-process-list' style="color: #fff;">No Process Inserted</h4>
+                    <br>
+                    <a href="#" class="btn btn-success colo sub_process" onclick="submit_process()">Submit Processes</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 part-3" style="display: none;">
+            <div class="row">
+            <div class="col-10">
+            <div class="jumbotron jumbotron-fluid bg-white">
+                <div class="row">
+                    <div class="col-3 offset-1">
+                        <br>
+                        <ul class="list-group algo-conf">
+                            <li class="list-group-item colo">Algorithm Configurations</li>
+                            <!-- insert programmatically -->
+                        </ul>
+                    </div>
+                    <div class="col-6 offset-1">
+                        <h5 class="wait-title">Waiting: </h5>
+                        <table class="table">
+                                <thead class="thead colo waiting-header">
+                                    <!-- insert in js -->
+                                </thead>
+                                <tbody class="waiting-process">
+                                    <!-- insert in js -->
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                    <h5 class="ready-title">Ready: </h5>
+                    <table class="table">
+                            <thead class="thead">
+                                <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">Arrival</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Executed</th>
+                                <th scope="col">Period</th>
+                                <th scope="col" class="wait-change">Waiting</th>
+                                <th scope="col">End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody class="ready-q">
+                                <!-- insert programmatically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                    <h5 class="suspended-title">Suspended: </h5>
+                    <table class="table">
+                            <thead class="thead">
+                                <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">Arrival</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Executed</th>
+                                <th scope="col">Period</th>
+                                <th scope="col" class="wait-change-2">Waiting</th>
+                                <th scope="col">End Time</th>
+                                </tr>
+                            </thead>
+                            <tbody class="suspended-q">
+                                <!-- inserted programmatically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-10 align-self-start timeline"> 
+                        <h5>Process Status:</h5>                       
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-start">
+                    <div class="col-3 offset-1">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a class="btn btn-secondary" style="color: #fff">Rewind</a>
+                            <a class="btn btn-primary" style="color: #fff" onclick="start_timer()">Play</a>
+                            <a class="btn btn-danger" style="color: #fff" onclick="stop_timer()">Pause</a>
+                            <a class="btn btn-secondary" style="color: #fff">Forward</a>
+                        </div>
+                                  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 justify-content-start">
+                <div class="card add-process" style="width: 18rem;">
+                    <h5 class="card-header">Add Process At this Time</h5>
+                    <div class="card-body dyn-proc">
+                        <form>
+                            <div class="form-group">
+                                <label for="round-robin-pid">Process ID</label>
+                                <input type="text" class="form-control-plaintext" id="round-robin-pid" placeholder="PID">
+                            </div>
+                            <div class="form-group">
+                                <label for="round-robin-duration">Duration</label>
+                                <input type="text" class="form-control-plaintext" id="round-robin-duration" placeholder="Duration of task">
+                            </div>
+                            <button type="submit" class="btn btn-success colo">Create</button>
+                        </form>
+                    </div>
+                </div> 
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <label for="textarea">Debug : </label>
+                        <textarea class="form-control" id="textarea" rows="8"></textarea>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        </div>
+  </div>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Made with <span style="color: red ;">&#10084;</span> by Vibhu Bhatia.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="scheduler.js"> </script>
+
+</body></html>
