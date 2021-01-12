@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>NN Lab</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background:#E8EAED;height: 100%;">
+
+  <div id='svgContainer'>
+    <svg id="svg" >
+               <line id="line"/>
+       </svg>
+   </div>
+   <div class="container-fluid">
+       <div class="row">
+           <div class="col-12" style="background-color: #fff;box-shadow:0 1px 4px rgba(0,0,0,0.08)">
+               <div class="row justify-content-center" style="margin-bottom:10px;margin-top:10px;">
+                   <div class="col-2 align-self-center">
+                       <span class="value">NN Lab!</span>
+                   </div>
+                   <div class="col-7">
+                           <div class="control d-inline-block">
+                               <span class="label">Epochs</span>
+                               <span class="value"><input class="form-control value epochs-val" type="text" value="10" style="border: none;border-bottom: solid 1px #000"></span>
+                           </div>
+                           <div class="control d-inline-block">
+                               <span class="label">Learning rate</span>
+                               <span class="value">
+                                   <select class="custom-select mr-sm-2 cust lr-select" id="inlineFormCustomSelect">
+                                       <option selected value="0.00001">0.00001</option>
+                                       <option value="0.0001">0.0001</option>
+                                       <option value="0.001">0.001</option>
+                                       <option value="0.01">0.01</option>
+                                       <option value="0.05">0.05</option>
+                                       <option value="0.1">0.1</option>
+                                       <option value="0.5">0.5</option>
+                                       <option value="1">1</option>
+                                       <option value="10">10</option>
+                                   </select>
+                               </span>
+                           </div>
+                           <div class="control d-inline-block">
+                               <span class="label">Activation</span>
+                               <span class="value">
+                                   <select class="custom-select mr-sm-2 cust activation-select" id="inlineFormCustomSelect">
+                                       <option selected value="relu">Relu</option>
+                                       <option value="tanh">Tanh</option>
+                                       <option value="sigmoid">sigmoid</option>
+                                       <option value="linear">Linear</option>
+                                   </select>
+                               </span>
+                           </div>
+                           <div class="control d-inline-block">
+                               <span class="label">Batch size</span>
+                               <span class="value">
+                                   <select class="custom-select mr-sm-2 cust batch-select" id="inlineFormCustomSelect">
+                                       <option selected value="16">16</option>
+                                       <option value="32">32</option>
+                                       <option value="64">64</option>
+                                       <option value="128">128</option>
+                                       <option value="256">256</option>
+                                       <option value="512">512</option>
+                                   </select>
+                               </span>
+                           </div>
+                   </div>
+                   <div class="col-2 mt-2">
+                           <div class="control" style="margin-top:5%;">
+                           <div class="label">
+                               <a class="btn btn-primary export" onclick="start_train()">Start Training</a>
+                           </div>
+                           <div class="label"><small id="status-text"></small></div>
+                           </div>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12" style="margin-top: 5%;">
+               <div class="row justify-content-center">
+                   <div class="col-3">
+                       <br>
+                       <div class="card data-card" style="margin-top: 20%;">
+   
+                           <div class="card-body">
+                               <h5 class="card-title">Chose Data</h5>
+                               <hr>
+                               <div class="control">
+                                   <span class="label"><img src="https://liip.rokka.io/www_inarticle_4/6d0772/detail.png" width="50"></span>
+                                   <span class="value">MNIST</span>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-5">
+                       <div class="row justify-content-center"><button class="btn-layers layers-add" onclick="change_layers('+')">+</button><button class="btn-layers" onclick="change_layers('-')">-</button><h4 class="text-muted nb-layers-number">1</h4> <h4 class="text-muted" style="margin-left: 10px;">hidden layers</h4></div>
+                       <hr>
+                       <br>
+                       <div class="row nb-layers justify-content-center">
+                           <div class="card card-1" style="width: 20%;">
+                               <div class="card-body">
+                                   <h6 class="card-title">Neurons : </h6>
+                                   <hr>
+                                       <div style="display: inline-block;"><button class="btn-layers export" onclick="change_neurons(1, 1)">+</button></div>
+                                       <div style="display: inline-block;"><button class="btn-layers export" onclick="change_neurons(0, 1)">-</button></div>
+                                       <div class="col" style="display: inline-block;margin-left:5%;">                                        
+                                           <input type="text" class="form-control nb-neurons-1 export-1" value="64">
+                                       </div>
+                               </div>
+                               <small class="text-muted" style="margin-left: 1em;">hl-1</small>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-3">
+                       <div row justify-content-center>
+                           <div class="row justify-content-center">
+                               <div class="metrics col-4">
+                               <h6>Output: </h6>
+                               </div>
+                               <div class="col-7" >
+                                   <canvas id="myChart"></canvas>
+                               </div>
+                           </div>
+                           <br>
+                       </div>
+                       <div class="card output-card">
+                           <div class="card-body">
+                               <div style="display:inline-block"><h5 class="card-title">Preview</h5></div>
+                               <div style="display:inline-block"><a class="btn btn-primary export2 exp1" disabled="disabled">Download model</a>
+                               </div>
+                               <hr>
+                               <div class="result-screen">
+                                   <h6>Train the model before seeing any results here!</h6>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+           <div class="row justify-content-center" style="position: absolute; bottom: 0 !important;margin-left:45%;">
+           <span class="label">Made with &hearts; by Vibhu Bhatia</span>
+       </div> 
+   </div>
+   
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+  <!-- Import tfjs-vis -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script type="module" src="data.js"></script>
+<script type="module" src="file.js"></script>
+<script type="module" src="svg.js"></script>
+</html>

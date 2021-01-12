@@ -1,0 +1,87 @@
+.control{
+    flex-grow: 1;
+    max-width: 180px;
+    min-width: 110px;
+    margin-left: 30px;
+    margin-top: 6px;
+}
+.label{
+    color: #777;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 400;
+}
+.value{
+    font-size: 24px;
+    margin: 0;
+    font-weight: 300;
+}
+.cust{
+    border: none;
+    border-bottom: 1px solid #1967D2;
+}
+.card{
+    box-shadow:0 1px 4px rgba(0,0,0,0.08);
+}
+.btn-layers{
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color:#fff;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: large;
+}
+.export, .export:hover{
+    background-color: #d2e3fc;
+    color: #1967D2 !important;
+    border: none;
+}
+.export:active{
+  background-color: #d2e3fc !important;
+  color: #1967D2 !important;
+}
+.export-1, .export-1:focus{
+    color: #1967D2;
+    border: none;
+    border-bottom: solid 1px #000;
+}
+.export2, .export2:hover{
+  background-color: lightgray;
+  color: gray !important;
+  border-color:lightgray!important;
+}
+.export2:active{
+  background-color: lightgray ;
+  color: #000;
+  border-color:lightgray!important;
+}
+line{
+    stroke-width:2px;
+    stroke:#1967D2;
+
+  }
+  .lin{
+    animation: dash 5s infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -300;
+    }
+  }
+
+  #svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #myCanvas{
+    background-color: black;
+  }
