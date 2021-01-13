@@ -23,6 +23,9 @@
       }
     }
   });
+
+
+  // project part ------------------------
   var classes_to_add = ['g-1', 'g-2', 'g-3', 'g-4','g-5','g-6', 'g-4'];
   var titles=['Generating rick n morty subtitles via machine learning', 'Greedy vs Heuristic', 'Playing frozen lake via qlearning', 'Shazam for things', 'classifying facial emotions', 'Generating superheroes using deep learning', 'teaching a bot to play atari games', 'Active learning for cats vs dogs']
   var pathtolink=['rnn','path','qlearn','shazam','emoji','gan','reinforce', 'active'];
@@ -70,12 +73,51 @@
       '</div>'+
     '</div></a>')
   }
+  // -------------------------
 
-  for (var i=1;i<=3;i++){
-    let r = Math.random().toString(36).substring(4, 10);
-    $('.research-card-'+i.toString()).geopattern(r);
-  }
+  // research part -----------------------------------
 
+  // for (var i=1;i<=3;i++){
+  //   let r = Math.random().toString(36).substring(4, 10);
+  //   $('.research-card-'+i.toString()).geopattern(r);
+  // }
+  var titles_res=['Active Learning with Sentence Error Classification in Machine Translation', 'real-time Super Resolution GAN',
+  'Working on Semi autonomous agricultural vehicles', 'Automating Calibration process for Biomedical devices']
+  var pathtoImages_res = ['./img/research/transformer.PNG', './img/research/sr.png', './img/research/slam.jpg', './img/research/calibration.jpg']
+  var links = [
+    '<a href="https://drive.google.com/file/d/13KHPYiz_fgJq3rG5CFZIj5S9Yhgprbft/view?usp=sharing"  target="_blank"><i class="fa fa-file fa-2x" style = "color:#fff;"></i></a>'+
+    '<a href="https://github.com/vibss2397/active-learning-for-nmt-with-error-classification.git" target="_blank" class="ml-4"><i class="fab fa-github fa-2x" aria-hidden="true" style="color: #fff;"></i></a>',
+
+    '<a href="https://colab.research.google.com/drive/1Syqb4oZH9TQvDHNLvbg69-kfzqV7nBoz"  target="_blank"><i class="fab fa-github fa-2x" style = "color:#fff;"></i></a>'+
+    '<a href="https://arxiv.org/abs/2010.04634v1" target="_blank" class="ml-4"><i class="fa fa-file fa-2x" aria-hidden="true" style="color: #fff;"></i></a>',
+
+    '<a href="https://colab.research.google.com/drive/1Syqb4oZH9TQvDHNLvbg69-kfzqV7nBoz"  target="_blank"><i class="fab fa-github fa-2x" style = "color:#fff;"></i></a>'+
+    '<a href="https://angel.co/deeproots" target="_blank" class="ml-4" ><i class="fa fa-globe fa-2x" style = "color:#fff;"></i></a>'+
+    '<a href="project/DeepRoots.html" class="ml-4" ><i class="fab fa-youtube fa-2x" style = "color:#fff;"></i></a>'+
+    '<a href="https://www.f6s.com/deeproots" target="_blank" class="ml-4"><i class="fa fa-id-card fa-2x" style = "color:#fff;"></i></a>',
+
+    '<a href="https://github.com/vibss2397/npl" target="_blank"><i class="fab fa-github fa-2x" style = "color:#fff;"></i></a>'+
+     '<a href="https://docs.google.com/document/d/1wRYpb3wXHoFL4OAy_jCcYhDUnP420Z2_bJ5MyFXgIFs/edit?usp=sharing" target="_blank" class="ml-4" style = "color:#fff;"><i class="fa fa-file fa-2x"></i></a>'
+  ]
+  var classes_to_add_res = ['g-2', 'g-3', 'g-7','g-8'];
+  for(let i = 0;i<2;i++){
+    let rand = Math.floor(Math.random()*titles_res.length);
+    $('.research-part').append(
+      '<div class="mt-5 col-9">'+
+        '<div class="item card mx-auto grad-card2 res-card-'+i+ '" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5" style="color: white;width: 70%;">'+
+          '<div class="row" style="z-index: 99;">'+
+            '<div class="col-4 mt-4 offset-1" style="background-color: #fff;">'+
+              '<img src='+pathtoImages_res[rand]+' class="img-fluid mt-3">'+
+            '</div>'+
+            '<div class="col-6">'+
+              '<div class="p-4">'+
+                '<h4>'+titles_res[rand]+'</h4>'+
+              '</div>'+
+                    '<div class="mx-auto">'+links[rand]+'</div> <br> </div> </div> </div> </div>')
+      $('.res-card-'+i).addClass(classes_to_add_res[rand%4]);
+    }
+  
+  // ---------------------
   // Closes responsive menu when a scroll trigger link is clicked
   $('#sidebar-wrapper .js-scroll-trigger').click(function() {
     $("#sidebar-wrapper").removeClass("active");

@@ -19,7 +19,7 @@ var projects = {
     "title": "Simulator for visualization of cpu scheduling algorithms",
     "abstract": "I wrote this program for simulating different kinds of non preemptive scheduling algorithms like Rate Monotonic and Earliest Deadline First. There is also a basic round robin algorithm. All the algorithms have some sort of tunable parameters. In cases, where there is no deadline these processes are repeated over and over again.",
     "image": "../img/gif/cpu.gif",
-    "github": "../cpu/index.html",
+    "github": "../demo/cpu/index.html",
     "body": "<div class=\"row justify-content-center mt-4\">\n\n             <div class=\"col-lg-8 col-xl-7 col-md-10\">\n\n       </div>\n\n      </div>\n",
     "coffee": 60
   },
