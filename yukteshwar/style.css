@@ -1,0 +1,32 @@
+/* style.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+#lovers-gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#yes-btn {
+    background-color: lightgreen;
+}
+
+#no-btn {
+    background-color: salmon;
+}
